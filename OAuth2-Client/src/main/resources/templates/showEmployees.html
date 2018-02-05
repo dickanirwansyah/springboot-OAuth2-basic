@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body>
+
+<div class="container">
+    <div class="container-fluid">
+        <div class="col-lg-10 col-lg-offset-1">
+            <h3>Data Employee OAuth2.0</h3>
+            <div class="page-header">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID Employee</th>
+                            <th>Nama</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="employee : ${listEmp}">
+                            <th th:text="${employee.empId}"></th>
+                            <th th:text="${employee.empName}"></th>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th>ID Employee</th>
+                        <th>Nama</th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
